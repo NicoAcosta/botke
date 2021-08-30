@@ -8,7 +8,7 @@ const images = fs.readdirSync('./images/')
 const config = require('./config.js')
 
 var T = new Twit(config)
-T.post('statuses/update', {status: 'started'}, tweeted)
+// T.post('statuses/update', {status: 'started'}, tweeted)
 var stream = T.stream('statuses/filter', {track: '@botbokita'})
 stream.on('tweet', tweetEvent)
 
